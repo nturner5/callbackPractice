@@ -122,9 +122,11 @@ each(names, function(item, indice){
 // and returns that user.
 
 function getUserById(users, id, callback){
+ // var obj = [users.email[i], users.name[i], users.address[i]]
 for (var i = 0; i < users.length; i++){
-  if (id = users.id[i]){
-  return callback(users[i])}
+  if (users[i].id === id){
+  callback(users[i]);
+}
 }
 }
 
